@@ -93,7 +93,11 @@ class AppData {
                 Word("HUMOR"), Word("HURRY"), Word("ICING"),
                 Word("IDEAL"), Word("IMAGE"), Word("IMPLY"),
                 Word("ADIEU"), Word("LEAST"), Word("PLANE"),
-                Word("DOUGH")
+                Word("DOUGH"), Word("START"), Word("STARS"),
+                Word("RAILS"), Word("PARTY"), Word("SMART"),
+                Word("GNOME"), Word("RACKS"), Word("WALLS"),
+                Word("FARTY"), Word("RUSTY"), Word("RALLY"),
+                Word("CRAVE")
             ))
         }
     }

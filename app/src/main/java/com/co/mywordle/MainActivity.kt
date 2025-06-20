@@ -48,9 +48,9 @@ class MainActivity : AppCompatActivity() {
         setupKeyboard()
         resetGame()
     }
-
+//================================================================================================
+    //Game Set up
     private fun initializeUI() {
-        // Initialize letter grid with explicit IDs to avoid runtime lookup errors
         letterCells = arrayOf(
             arrayOf(
                 findViewById<TextView>(R.id.inputLetter_11_id),
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
-        // Disable focus & soft keyboard, and clear text
+        // Disable focus & android keyboard, and clear text
         letterCells.flatten().forEach { view ->
             view.apply {
                 isFocusable = false
@@ -132,16 +132,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectRandomWord() {
-        // Select a random word from the list
+        //targetWord = ("FLAME");
         targetWord = AppData.words.random().word
     }
 
     private fun setupKeyboard() {
-        // Reset keyboard colors and text colors
         keyboardButtons.values.forEach { button ->
             button.setBackgroundColor(KEYBOARD_DEFAULT_COLOR)
             button.setTextColor(TEXT_DEFAULT_COLOR)
-            button.tag = 0 // default state
+            //set letter to default state
+            button.tag = 0
         }
     }
 
@@ -166,6 +166,8 @@ class MainActivity : AppCompatActivity() {
         selectRandomWord()
     }
 
+    //================================================================================================
+    //Input and gameplay set up
     private fun onLetterClick(letter: Char) {
         if (gameOver || currentRow > MAX_ATTEMPTS || currentCol > WORD_LENGTH) return
 
@@ -195,9 +197,10 @@ class MainActivity : AppCompatActivity() {
 
         // Check if row is complete
         if (currentCol <= WORD_LENGTH) {
-            Toast.makeText(this, "Complete the word first", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Not enough letters", Toast.LENGTH_SHORT).show()
             return
         }
+        //Toast.LENGTH_SHORT for message pop up for a short duration
 
         // Collect current word
         val guessWord = (0 until WORD_LENGTH).map { col ->
@@ -231,31 +234,42 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
     private fun isValidWord(word: String): Boolean {
         return AppData.words.any { it.word == word }
     }
+
+
 
     private fun checkWord(guessWord: String) {
         val targetCharCount = mutableMapOf<Char, Int>()
         
         // Count characters in target word
+        //target char count starts as 5
         targetWord.forEach { char ->
             targetCharCount[char] = (targetCharCount[char] ?: 0) + 1
         }
-        
+
+        //comparing each char
         // First pass: Mark correct letters
-        val letterStates = Array(WORD_LENGTH) { -1 } // -1: unknown, 0: absent, 1: present, 2: correct
+        //STATES:
+        //       -1: unknown, 0: absent, 1: present, 2: correct
+        val letterStates = Array(WORD_LENGTH) { -1 }
         
         for (i in 0 until WORD_LENGTH) {
             val guessChar = guessWord[i]
             
             if (guessChar == targetWord[i]) {
                 letterStates[i] = 2 // correct position
+                //if found a correct char, target char count -1
+                //the letter state is changed to correct
                 targetCharCount[guessChar] = (targetCharCount[guessChar] ?: 0) - 1
             }
         }
-        
+
+        //after weeding out the correct char(s)
         // Second pass: Mark present and absent letters
+        //i = 0(char still in default state
         for (i in 0 until WORD_LENGTH) {
             if (letterStates[i] == 2) continue // Skip already marked correct
             
@@ -269,8 +283,9 @@ class MainActivity : AppCompatActivity() {
                 letterStates[i] = 0 // absent
             }
         }
+
         
-        // Update UI based on letter states
+        // Update cell color and keyboard color based on letter states
         for (i in 0 until WORD_LENGTH) {
             val cell = letterCells[currentRow - 1][i]
             val guessChar = guessWord[i]

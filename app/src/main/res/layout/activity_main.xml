@@ -34,21 +34,18 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="70dp"
-        android:layout_marginEnd="10dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider_id">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -126,7 +123,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -189,7 +185,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -268,7 +263,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -346,7 +340,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -424,7 +417,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -507,8 +499,9 @@
         android:layout_height="229dp"
         android:layout_marginTop="40dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -519,6 +512,7 @@
                 android:id="@+id/qButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -529,6 +523,7 @@
                 android:id="@+id/wButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -539,6 +534,7 @@
                 android:id="@+id/eButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -549,6 +545,7 @@
                 android:id="@+id/rButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -559,6 +556,7 @@
                 android:id="@+id/tButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -569,6 +567,7 @@
                 android:id="@+id/yButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -579,6 +578,7 @@
                 android:id="@+id/uButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -589,6 +589,7 @@
                 android:id="@+id/iButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -599,6 +600,7 @@
                 android:id="@+id/oButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -609,6 +611,7 @@
                 android:id="@+id/pButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -627,6 +630,7 @@
                 android:id="@+id/aButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -637,6 +641,7 @@
                 android:id="@+id/sButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -647,6 +652,7 @@
                 android:id="@+id/dButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -657,6 +663,7 @@
                 android:id="@+id/fButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -667,6 +674,7 @@
                 android:id="@+id/gButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -677,6 +685,7 @@
                 android:id="@+id/hButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -687,6 +696,7 @@
                 android:id="@+id/jButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -697,6 +707,7 @@
                 android:id="@+id/kButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -707,6 +718,7 @@
                 android:id="@+id/lButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -724,6 +736,7 @@
                 android:id="@+id/enterButton_id"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:backgroundTint="#DEDEDE"
                 android:insetTop="0dp"
@@ -738,6 +751,7 @@
                 android:id="@+id/zButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -748,6 +762,7 @@
                 android:id="@+id/xButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -758,6 +773,7 @@
                 android:id="@+id/cButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -768,6 +784,7 @@
                 android:id="@+id/vButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -778,6 +795,7 @@
                 android:id="@+id/bButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -788,6 +806,7 @@
                 android:id="@+id/nButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -798,6 +817,7 @@
                 android:id="@+id/mButton_id"
                 android:layout_width="36dp"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
@@ -808,6 +828,7 @@
                 android:id="@+id/deleteButton_id"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:backgroundTint="#DEDEDE"
                 android:insetTop="0dp"
