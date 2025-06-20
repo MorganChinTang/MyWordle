@@ -40,10 +40,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Initialize word list
-        AppData.initWords()
+        //AppData.initWords()
 
         // Initialize the game
         initializeUI()
+        AppData.initWords(applicationContext)
         selectRandomWord()
         setupKeyboard()
         resetGame()
@@ -132,7 +133,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectRandomWord() {
+        //Testing word v v v v
         //targetWord = ("FLAME");
+        //targetWord = ("PAPER");
         targetWord = AppData.words.random().word
     }
 
